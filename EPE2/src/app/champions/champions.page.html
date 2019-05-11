@@ -1,9 +1,54 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>champions</ion-title>
+  <ion-toolbar color="dark">
+    <ion-buttons slot="start">
+      <ion-button (click)="verToast()">
+        <ion-icon slot="icon-only" name="ios-football"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button (click)="verToast()">
+        <ion-icon slot="icon-only" name="md-football"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>
+      Deportes - CHAMPIONS LEAGUE
+    </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  <ion-item>
+    <ion-label>Por defecto</ion-label>
+    <ion-checkbox></ion-checkbox>
+  </ion-item>
+  <ion-item>
+    <ion-label>Deshabilitado</ion-label>
+    <ion-checkbox disabled="true"></ion-checkbox>
+  </ion-item>
+  <ion-item>
+    <ion-label>Seleccionado</ion-label>
+    <ion-checkbox disabled="true"></ion-checkbox>
+  </ion-item>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-label>Colores</ion-label>
+      </ion-col>
+      <ion-col>
+        <ion-checkbox color="success"></ion-checkbox>
+      </ion-col>
+      <ion-col>
+        <ion-checkbox color="danger"></ion-checkbox>
+      </ion-col>
+      <ion-col>
+        <ion-checkbox color="warning"></ion-checkbox>
+      </ion-col>
+      <ion-col>
+        <ion-checkbox color="secondary"></ion-checkbox>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+
 
 </ion-content>
