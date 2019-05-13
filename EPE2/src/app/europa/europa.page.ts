@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-europa',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EuropaPage implements OnInit {
 
-  constructor() { }
-
+  constructor(public navCtrl: NavController) { }
+  irVolver() {
+    this.navCtrl.navigateBack('tab1');
+  }
   ngOnInit() {
   }
+
 
 }

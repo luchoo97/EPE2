@@ -2,3 +2,8 @@
   max-height: 35vh;
   overflow: hidden;
 }
+ion-content{
+  //background-color:color($colors,primary);
+  background-image:url('/assets/background/.jpg');
+  background-size:100% auto;
+  }

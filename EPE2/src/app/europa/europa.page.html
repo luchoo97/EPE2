@@ -1,9 +1,62 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>europa</ion-title>
-  </ion-toolbar>
-</ion-header>
+    <ion-toolbar color="dark">
+      <ion-buttons slot="start">
+          <ion-back-button text="volver" defaultHref="tab1"></ion-back-button>
+        
+      </ion-buttons>
+      <ion-buttons slot="end">
+        <ion-button (click)="verToast()">
+          <ion-icon slot="icon-only" name="md-football"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+      <ion-title>
+        Deportes - EUROPA LEAGUE
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
 
-<ion-content>
+  <ion-content>
+      <ion-card>
+        <ion-img src="assets/imagenes/arsenal.jpg">
+    
+        </ion-img>
+        <ion-card-header>
+          <ion-card-title>
+              Demasiado Arsenal para el Valencia
+          </ion-card-title>
+          <ion-card-subtitle>
+            
 
-</ion-content>
+El 1-0 de Gameiro fue esperanzador, pero los de Emery, liderados por un ataque mortal lograron el pase y jugarán la final ante el Chelsea.
+
+          </ion-card-subtitle>
+    
+        </ion-card-header>
+        <ion-button color="warning" (click)="IrChampions()">
+          ver Noticia
+        </ion-button>
+        
+      </ion-card>
+      <ion-card>
+        <ion-img src="assets/imagenes/live.jpg">
+    
+        </ion-img>
+        <ion-card-header>
+          <ion-card-title>
+            La fe del Liverpool le lleva a Madrid
+          </ion-card-title>
+          <ion-card-subtitle>
+            Dos goles de Origi y otros dos de Wijnaldum obran el milagro ante el Barça y llevan a los de Klopp a la final del Metropolitano.
+          </ion-card-subtitle>
+    
+        </ion-card-header>
+        <ion-button color="warning" (click)="IrChampions()">
+          ver Noticia
+        </ion-button>
+        
+      </ion-card>
+    
+    
+    
+    
+    </ion-content>
