@@ -1,9 +1,48 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar color="dark">
+    <ion-buttons slot="start">
+      <ion-back-button text="volver" defaultHref="tab1"></ion-back-button>
+
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button (click)="verToast()">
+        <ion-icon slot="icon-only" name="md-football"></ion-icon>
+      </ion-button>
+    </ion-buttons>
     <ion-title>
-      Tab Three
+      NOSOTROS
     </ion-title>
   </ion-toolbar>
 </ion-header>
+<ion-content padding>
 
-<ion-content></ion-content>
+
+  <ion-list>
+    <ion-list-header>
+      videos
+    </ion-list-header>
+    <ion-item>
+
+      <ion-label>INTRO UEFA CHAMPIONS LEAGUE</ion-label>
+      <ion-toggle [(ngModel)]="videoss" color="success"></ion-toggle>
+      <h1 *ngIf="videoss">
+        <iframe width="100%" height="315" [src]="trustedVideoUrl" frameborder="0" allowfullscreen></iframe>
+
+        <h2>{{ video.title }}</h2>
+      </h1>
+
+    </ion-item>
+
+    <ion-item>
+      <ion-label>INTRO UEFA EUROPA LEAGUE</ion-label>
+      <ion-toggle [(ngModel)]="videosss" color="success"></ion-toggle>
+      <h1 *ngIf="videosss">
+        <iframe width="100%" height="315" [src]="trustedVideoUrl1" frameborder="0" allowfullscreen></iframe>
+
+        <h2>{{ videoo.title1 }}</h2>
+      </h1>
+    </ion-item>
+
+    
+  </ion-list>
+</ion-content>

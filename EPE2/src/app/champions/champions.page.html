@@ -1,9 +1,8 @@
 <ion-header>
   <ion-toolbar color="dark">
     <ion-buttons slot="start">
-      <ion-button (click)="verToast()">
-        <ion-icon slot="icon-only" name="ios-football"></ion-icon>
-      </ion-button>
+        <ion-back-button text="volver" defaultHref="tab1"></ion-back-button>
+      
     </ion-buttons>
     <ion-buttons slot="end">
       <ion-button (click)="verToast()">
@@ -17,37 +16,43 @@
 </ion-header>
 
 <ion-content>
-  <ion-item>
-    <ion-label>Por defecto</ion-label>
-    <ion-checkbox></ion-checkbox>
-  </ion-item>
-  <ion-item>
-    <ion-label>Deshabilitado</ion-label>
-    <ion-checkbox disabled="true"></ion-checkbox>
-  </ion-item>
-  <ion-item>
-    <ion-label>Seleccionado</ion-label>
-    <ion-checkbox disabled="true"></ion-checkbox>
-  </ion-item>
-  <ion-grid>
-    <ion-row>
-      <ion-col>
-        <ion-label>Colores</ion-label>
-      </ion-col>
-      <ion-col>
-        <ion-checkbox color="success"></ion-checkbox>
-      </ion-col>
-      <ion-col>
-        <ion-checkbox color="danger"></ion-checkbox>
-      </ion-col>
-      <ion-col>
-        <ion-checkbox color="warning"></ion-checkbox>
-      </ion-col>
-      <ion-col>
-        <ion-checkbox color="secondary"></ion-checkbox>
-      </ion-col>
-    </ion-row>
-  </ion-grid>
+  <ion-card>
+    <ion-img src="assets/imagenes/tote.jpg">
+
+    </ion-img>
+    <ion-card-header>
+      <ion-card-title>
+        Noche soñada para el Tottenham
+      </ion-card-title>
+      <ion-card-subtitle>
+        Con un gol en el 90+6', Lucas Moura completó un 'hat-trick' que sirvió para que los londinenses vayan a disputar su primera final #UCL.
+      </ion-card-subtitle>
+
+    </ion-card-header>
+    <ion-button color="warning" (click)="IrChampions()">
+      ver Noticia
+    </ion-button>
+    
+  </ion-card>
+  <ion-card>
+    <ion-img src="assets/imagenes/live.jpg">
+
+    </ion-img>
+    <ion-card-header>
+      <ion-card-title>
+        La fe del Liverpool le lleva a Madrid
+      </ion-card-title>
+      <ion-card-subtitle>
+        Dos goles de Origi y otros dos de Wijnaldum obran el milagro ante el Barça y llevan a los de Klopp a la final del Metropolitano.
+      </ion-card-subtitle>
+
+    </ion-card-header>
+    <ion-button color="warning" (click)="IrChampions()">
+      ver Noticia
+    </ion-button>
+    
+  </ion-card>
+
 
 
 

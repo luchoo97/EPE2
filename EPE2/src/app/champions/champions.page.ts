@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {NavController} from '@ionic/angular';
 
 @Component({
   selector: 'app-champions',
@@ -7,7 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ChampionsPage implements OnInit {
 
-  constructor() { }
+  constructor(public navCtrl: NavController) { }
+   irVolver(){
+    this.navCtrl.navigateBack('tab1');
+  }
 
   ngOnInit() {
   }
