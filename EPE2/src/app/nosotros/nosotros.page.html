@@ -1,23 +1,37 @@
 <ion-header>
-    <ion-toolbar>
-      <ion-title>nosotros</ion-title>
+    <ion-toolbar color="dark">
+      <ion-buttons slot="start">
+          <ion-back-button text="volver" defaultHref="tab1"></ion-back-button>
+        
+      </ion-buttons>
+      <ion-buttons slot="end">
+        <ion-button (click)="verToast()">
+          <ion-icon slot="icon-only" name="md-football"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+      <ion-title>
+        NOSOTROS
+      </ion-title>
     </ion-toolbar>
   </ion-header>
   
   <ion-content padding>
-      <h2>¿Qué deportes practicas?</h2>
-      <ion-list>
+      <h2>¿Cuál es tu Sexo?</h2>
+      <ion-list radio-group [(ngModel)]="sexo" (ionChange)="actualizarSexo()">
         <ion-item>
-          <ion-label>Fútbol</ion-label>
-          <ion-checkbox [(ngModel)]="futbol" (ionChange)="actualizaFutbol()" Fútbol></ion-checkbox>
+          <ion-label>Hombre</ion-label>
+          <ion-radio value="Hombre" Hombre></ion-radio>
         </ion-item>
         <ion-item>
-          <ion-label>Baloncesto</ion-label>
-          <ion-checkbox Baloncesto></ion-checkbox>
-        </ion-item>
-        <ion-item>
-          <ion-label>Béisbol</ion-label>
-          <ion-checkbox Baloncesto></ion-checkbox>
+          <ion-label>Mujer</ion-label>
+          <ion-radio value="Mujer" Mujer></ion-radio>
         </ion-item>
       </ion-list>
     </ion-content>
+    
+    <ion-footer>
+      <ion-item>
+        <ion-label>Mostrar Mensaje</ion-label>
+        <ion-checkbox [(ngModel)]="mostrarMensaje" Mostrar Mensaje></ion-checkbox>
+      </ion-item>
+    </ion-footer>
