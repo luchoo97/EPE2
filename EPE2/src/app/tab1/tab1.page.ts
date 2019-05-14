@@ -15,5 +15,12 @@ export class Tab1Page {
   IrEuropa(){
     this.navCtrl.navigateForward('europa');
   }
+  irNosotros(){
+    this.navCtrl.navigateForward('nosotros');
+  }
+
+ 
+
+  
 }
 

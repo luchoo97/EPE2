@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ToastController, ActionSheetController, NavController } from '@ionic/angular';
+import { ToastController, ActionSheetController, NavController, AlertController } from '@ionic/angular';
 
 @Component({
   selector: 'app-tab2',
@@ -7,12 +7,14 @@ import { ToastController, ActionSheetController, NavController } from '@ionic/an
   styleUrls: ['tab2.page.scss']
 })
 export class Tab2Page {
-  constructor(public AsheetCtrl: ActionSheetController, public ToastCtrl: ToastController, public NavCtrl: NavController){}
-  public form = [
-    { val: 'Héctor Navarro', isChecked: true },
-    { val: 'Luis Sánchez', isChecked: false },
-    
-  ];
+  hector: boolean;
+  constructor(public AsheetCtrl: ActionSheetController, public ToastCtrl: ToastController, public NavCtrl: NavController, public alertCrtl: AlertController){
+    this.hector = true;
+  }
+  
+
+ 
+
   async verNotificacion(){
     const toast = await this.ToastCtrl.create({
       message: "EPE2 - IPCHLE PROFESOR GERMÁN RIVEROS",
@@ -54,6 +56,19 @@ export class Tab2Page {
     })
     hoja.present();
   }
+
+  actualizaNombre() {
+    this.showAlert();
+}
+
+   async showAlert() {
+    const alert = await this.alertCrtl.create({
+        header: 'Héctor',
+        subHeader: 'El valor de Nombre es: ' + this.hector,
+        buttons: ['OK']
+    });
+    alert.present();
+}
 
 
 }
