@@ -26,13 +26,18 @@ vide1: any = {
   title2: 'LIVERPOOL 4 - BARCELONA 0 '
   
 };
-
+video2: any = {
+  url: 'https://www.youtube.com/watch?v=jbHjp3wggFc&t=46s',
+  title3: 'Valencia 2 - Arsenal 4 '
+  
+};
 
 
   public videos: boolean = true;
   trustedVideoUrl: SafeResourceUrl;
   trustedVideoUrl1: SafeResourceUrl;
   trustedVideoUrl2: SafeResourceUrl;
+  trustedVideoUrl3: SafeResourceUrl;
   constructor(public navCtrl: NavController,
     private domSanitizer: DomSanitizer){
       
@@ -42,6 +47,7 @@ vide1: any = {
     this.trustedVideoUrl = this.domSanitizer.bypassSecurityTrustResourceUrl(this.video.url);
     this.trustedVideoUrl1 = this.domSanitizer.bypassSecurityTrustResourceUrl(this.videoo.url);
     this.trustedVideoUrl2 = this.domSanitizer.bypassSecurityTrustResourceUrl(this.vide1.url);
+    this.trustedVideoUrl3 = this.domSanitizer.bypassSecurityTrustResourceUrl(this.vide1.url);
 
 }
 }

@@ -52,15 +52,29 @@
       </h1>
 
     </ion-item>
+    <ion-item>
+      <ion-label>Valencia 2 - Arsenal 4</ion-label>
+      <ion-toggle [(ngModel)]="videossss" color="success"></ion-toggle>
+    <h1 *ngIf="videossss">
+      <iframe width="100%" height="315" [src]="trustedVideoUrl3" frameborder="0" allowfullscreen></iframe>
+
+      <h2>{{ video2.title3 }}</h2>
+    </h1>
+
+  </ion-item>
 
     
   </ion-list>
 </ion-content>
 <ion-footer>
+ 
     <ion-toolbar  color="dark">
         <ion-buttons slot="end">
+            Deportes
             <ion-button (click)="verToast()">
+                
               <ion-icon slot="icon-only" name="md-football"></ion-icon>
+            
             </ion-button>
           </ion-buttons>
     </ion-toolbar>
