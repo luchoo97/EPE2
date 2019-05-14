@@ -8,6 +8,7 @@ import { SafeResourceUrl, DomSanitizer } from '@angular/platform-browser';
   styleUrls: ['tab3.page.scss']
 })
 export class Tab3Page {
+  
 
   video: any = {
     url: 'https://www.youtube.com/embed/X3Zs-HZczUM',
@@ -50,4 +51,9 @@ video2: any = {
     this.trustedVideoUrl3 = this.domSanitizer.bypassSecurityTrustResourceUrl(this.vide1.url);
 
 }
+irVolver(){
+  this.navCtrl.navigateBack('tab1');
+}
+
+
 }
