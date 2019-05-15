@@ -14,13 +14,15 @@
     </ion-title>
   </ion-toolbar>
 </ion-header>
-<ion-content>
+<ion-content padding>
+
 
   <ion-list>
     <ion-list-header>
       videos
     </ion-list-header>
     <ion-item>
+    
 
       <ion-label>INTRO UEFA CHAMPIONS LEAGUE</ion-label>
       <ion-toggle [(ngModel)]="videoss" color="success"></ion-toggle>
@@ -53,8 +55,8 @@
     </ion-item>
     <ion-item>
       <ion-label>Valencia 2 - Arsenal 4</ion-label>
-      <ion-toggle [(ngModel)]="videossss" color="success"></ion-toggle>
-    <h1 *ngIf="videossss">
+      <ion-toggle [(ngModel)]="videosssss" color="success"></ion-toggle>
+    <h1 *ngIf="videosssss">
       <iframe width="100%" height="315" [src]="trustedVideoUrl3" frameborder="0" allowfullscreen></iframe>
 
       <h2>{{ video2.title3 }}</h2>
