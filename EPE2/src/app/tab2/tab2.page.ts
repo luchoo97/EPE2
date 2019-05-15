@@ -24,7 +24,7 @@ export class Tab2Page {
     toast.present();
   }
   async verPagina(){
-    this.NavCtrl.navigateBack('tab1');
+    this.NavCtrl.navigateBack('champions');
     
   }
 

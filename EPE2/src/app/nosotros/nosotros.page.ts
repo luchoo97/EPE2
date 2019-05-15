@@ -8,10 +8,6 @@ import { NavController, AlertController } from '@ionic/angular';
   styleUrls: ['./nosotros.page.scss'],
 })
 export class NosotrosPage implements OnInit {
-  ngOnInit(): void {
-   
-  }
-
   
   sexo: string;
   mostrarMensaje: boolean;
@@ -28,11 +24,14 @@ export class NosotrosPage implements OnInit {
     }
 
    async showAlert() {
-        let alert = await this.alertCtrl.create({
+        const alert = await this.alertCtrl.create({
             header: 'Sexo',
             subHeader: 'El valor de Sexo es: ' + this.sexo,
             buttons: ['OK']
         });
         alert.present();
+    }
+    ngOnInit(): void {
+   
     }
   }
