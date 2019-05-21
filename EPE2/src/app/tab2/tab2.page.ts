@@ -40,7 +40,7 @@ export class Tab2Page {
               this.verNotificacion();
             }
           },{
-            text: 'tab',
+            text: 'Ver noticias de Champions',
             icon: 'book',
             handler: () => {
               this.verPagina();

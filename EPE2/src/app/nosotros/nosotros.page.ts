@@ -9,10 +9,10 @@ import { NavController, AlertController } from '@ionic/angular';
 })
 export class NosotrosPage implements OnInit {
   
-  sexo: string;
+  equipo: string;
   mostrarMensaje: boolean;
   constructor(public navCtrl: NavController, public alertCtrl: AlertController) {
-    this.sexo = "Mujer";
+    this.equipo = "Tottenham";
     this.mostrarMensaje = false;
     }
 
@@ -25,8 +25,8 @@ export class NosotrosPage implements OnInit {
 
    async showAlert() {
         const alert = await this.alertCtrl.create({
-            header: 'Sexo',
-            subHeader: 'El valor de Sexo es: ' + this.sexo,
+            header: 'Equipo',
+            subHeader: 'Has votado por: ' + this.equipo,
             buttons: ['OK']
         });
         alert.present();

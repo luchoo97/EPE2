@@ -18,19 +18,19 @@ export class Tab3Page {
 };
 videoo: any = {
   url: 'https://www.youtube.com/embed/wazqZEkbVR0',
-  title1: 'EU'
+  title1: 'EUROPA LEAGUE'
   
 };
 
 vide1: any = {
-  url: 'https://www.youtube.com/embed/zutXWIRnOV80',
+  url: 'https://www.youtube.com/embed/lZaK5k3zNVI',
   title2: 'LIVERPOOL 4 - BARCELONA 0 '
-  
+ 
 };
 video2: any = {
-  url: 'https://www.youtube.com/watch?v=jbHjp3wggFc&t=46s',
+  url: ' https://www.youtube.com/embed/vIMZ5uSc8T8',
   title3: 'Valencia 2 - Arsenal 4 '
-  
+
 };
 
 
@@ -48,7 +48,7 @@ video2: any = {
     this.trustedVideoUrl = this.domSanitizer.bypassSecurityTrustResourceUrl(this.video.url);
     this.trustedVideoUrl1 = this.domSanitizer.bypassSecurityTrustResourceUrl(this.videoo.url);
     this.trustedVideoUrl2 = this.domSanitizer.bypassSecurityTrustResourceUrl(this.vide1.url);
-    this.trustedVideoUrl3 = this.domSanitizer.bypassSecurityTrustResourceUrl(this.vide1.url);
+    this.trustedVideoUrl3 = this.domSanitizer.bypassSecurityTrustResourceUrl(this.video2.url);
 
 }
 irVolver(){

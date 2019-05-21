@@ -15,20 +15,34 @@
     </ion-toolbar>
   </ion-header>
   
-  <ion-content padding>
-      <h2>¿Cuál es tu Sexo?</h2>
-      <ion-list radio-group [(ngModel)]="sexo" (ionChange)="actualizarSexo()">
-        <ion-item>
-          <ion-label>Hombre</ion-label>
-          <ion-radio value="Hombre" Hombre></ion-radio>
-        </ion-item>
-        <ion-item>
-          <ion-label>Mujer</ion-label>
-          <ion-radio value="Mujer" Mujer></ion-radio>
-        </ion-item>
-      </ion-list>
+  <ion-content  color="danger" padding>
+      <h2>¿Quien ganará la Champions League?</h2>
+      
+
+      <ion-list>
+          <ion-radio-group radio-group [(ngModel)]="sexo" (ionChange)="actualizarSexo()">
+            <ion-list-header>
+              <ion-label>VOTA!</ion-label>
+            </ion-list-header>
+        
+            <ion-item>
+              <ion-label>Liverpool</ion-label>
+              <ion-radio slot="start" value="Liverpool" checked></ion-radio>
+            </ion-item>
+        
+            <ion-item>
+              <ion-label>Tottenham</ion-label>
+              <ion-radio slot="start" value="Tottenham"></ion-radio>
+            </ion-item>
+        
+           
+          </ion-radio-group>
+        </ion-list>
     </ion-content>
     
+
+
+
     <ion-footer>
       <ion-item>
         <ion-label>Mostrar Mensaje</ion-label>

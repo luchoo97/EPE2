@@ -1,7 +1,7 @@
 <ion-header>
   <ion-toolbar color="dark">
     <ion-buttons slot="start">
-    
+
 
     </ion-buttons>
     <ion-buttons slot="end">
@@ -9,32 +9,32 @@
         <ion-icon slot="icon-only" name="md-football"></ion-icon>
       </ion-button>
     </ion-buttons>
-    <ion-title>
-     Videos
+    <ion-title color="warning">
+      Videos
     </ion-title>
   </ion-toolbar>
 </ion-header>
-<ion-content padding>
 
-
+<ion-content color="warning"> 
   <ion-list>
-    <ion-list-header>
-      videos
-    </ion-list-header>
-    <ion-item>
     
+    <ion-item color="success">
+
 
       <ion-label>INTRO UEFA CHAMPIONS LEAGUE</ion-label>
-      <ion-toggle [(ngModel)]="videoss" color="success"></ion-toggle>
-      <h1 *ngIf="videoss">
-        <iframe width="100%" height="315" [src]="trustedVideoUrl" frameborder="0" allowfullscreen></iframe>
+      <div>
+        <ion-toggle [(ngModel)]="videoss" color="danger" id="boton"></ion-toggle>
+      </div>
 
-        <h2>{{ video.title }}</h2>
-      </h1>
+        <h1 *ngIf="videoss">
+          <iframe width="100%" height="200" [src]="trustedVideoUrl" frameborder="0" allowfullscreen></iframe>
 
+          <h2>{{ video.title }}</h2>
+        </h1>
+   
     </ion-item>
 
-    <ion-item>
+    <ion-item color="success">
       <ion-label>INTRO UEFA EUROPA LEAGUE</ion-label>
       <ion-toggle [(ngModel)]="videosss" color="success"></ion-toggle>
       <h1 *ngIf="videosss">
@@ -43,9 +43,9 @@
         <h2>{{ videoo.title1 }}</h2>
       </h1>
     </ion-item>
-    <ion-item>
-        <ion-label>LIVERPOOL 4 - BARCELONA 0</ion-label>
-        <ion-toggle [(ngModel)]="videossss" color="success"></ion-toggle>
+    <ion-item color="success">
+      <ion-label>LIVERPOOL 4 - BARCELONA 0</ion-label>
+      <ion-toggle [(ngModel)]="videossss" color="success"></ion-toggle>
       <h1 *ngIf="videossss">
         <iframe width="100%" height="315" [src]="trustedVideoUrl2" frameborder="0" allowfullscreen></iframe>
 
@@ -53,30 +53,41 @@
       </h1>
 
     </ion-item>
-    <ion-item>
+    <ion-item color="success">
       <ion-label>Valencia 2 - Arsenal 4</ion-label>
       <ion-toggle [(ngModel)]="videosssss" color="success"></ion-toggle>
-    <h1 *ngIf="videosssss">
-      <iframe width="100%" height="315" [src]="trustedVideoUrl3" frameborder="0" allowfullscreen></iframe>
+      <h1 *ngIf="videosssss">
+        <iframe width="100%" height="315" [src]="trustedVideoUrl3" frameborder="0" allowfullscreen></iframe>
 
-      <h2>{{ video2.title3 }}</h2>
-    </h1>
+        <h2>{{ video2.title3 }}</h2>
+      </h1>
 
-  </ion-item>
-
+    </ion-item>
     
+
+
   </ion-list>
+
+  <ion-item>
+      <ion-slides>
+          <ion-slide><ion-img src="assets/imagenes/liverpool.jpeg"></ion-img></ion-slide>
+          <ion-slide><ion-img src="assets/imagenes/barcelona.jpg"></ion-img></ion-slide>
+          <ion-slide><ion-img src="assets/imagenes/bayern.jpg"></ion-img></ion-slide>
+          <ion-slide><ion-img src="assets/imagenes/realmadrid.jpg"></ion-img></ion-slide>
+        </ion-slides>
+  </ion-item>
 </ion-content>
+
 <ion-footer>
- 
-    <ion-toolbar  color="dark">
-        <ion-buttons slot="end">
-            Deportes
-            <ion-button (click)="verToast()">
-                
-              <ion-icon slot="icon-only" name="md-football"></ion-icon>
-            
-            </ion-button>
-          </ion-buttons>
-    </ion-toolbar>
-  </ion-footer>
+
+  <ion-toolbar color="dark">
+    <ion-buttons slot="end">
+      Deportes
+      <ion-button (click)="verToast()">
+
+        <ion-icon slot="icon-only" name="md-football"></ion-icon>
+
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>
